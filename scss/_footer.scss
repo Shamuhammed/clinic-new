@@ -1,0 +1,119 @@
+//footer
+.footer {
+   background: #EAE9E9;
+   padding: 60px 0 90px;
+
+   &__block {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: start;
+      justify-content: space-between;
+
+      @media (max-width: $md1) {
+         display: block;
+      }
+   }
+
+   &__logo-block {
+      max-width: 290px;
+   }
+
+   &__logo {
+      margin: 0 0 30px;
+   }
+
+   &__text {
+   }
+
+   &__blocks {
+      width: 50%;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      @media (max-width: $md1) {
+         display: block;
+      }
+   }
+
+   &__content-block {
+   }
+
+   &__title {
+   }
+
+   &__list {
+      li {
+         margin: 0 0 20px;
+         a {
+            &:hover {
+               color: $_BlueD;
+            }
+         }
+      }
+   }
+
+   &__contact-block {
+   }
+
+   &__social {
+      display: flex;
+      align-items: center;
+   }
+}
+
+@media (max-width: $md1) {
+   .accordion {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+   
+      &__item {
+      }
+   
+      &__btn {
+         display: block;
+         padding: 1rem 1rem 1rem 0;
+         border-bottom: 1px solid $_greyL;
+         position: relative;
+         transition: all .3s ease;
+      }
+   
+      &__sub-list {
+         overflow: hidden;
+         max-height: 0;
+         transition: max-height .8s ease-out;
+      }
+   
+      &__sub-btn {
+         display: block;
+         position: relative;
+         transition: all .3s ease;
+   
+         &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 5px;
+            background-color: $_grey;
+            opacity: 0;
+            transition: all .3s;
+         }
+   
+         &:hover {
+            padding-left: 5px;
+            color: $_grey;
+            font-size: 1.2em;
+            
+            &::before {
+               opacity: 1;
+            }
+         }
+      }
+   }
+   .accordion__item.target>.accordion__sub-list {
+      max-height: 20rem;
+   }
+}

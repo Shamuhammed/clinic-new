@@ -1,0 +1,34 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500&family=Roboto:wght@400;500&display=swap');
+//color
+$_white: #fff;
+$_grey: #3F3F3F;
+$_greyL: #878686;
+$_Blue: #0495FD;
+$_BlueD: #3884AF;
+
+//font-family
+$ff1: 'Commissioner', sans-serif;
+$ff2: 'Roboto', sans-serif;
+
+//container templates
+$minwidth: 320px;
+$mw: 1340px;
+$md1: $mw+12px;
+$md2: 992.98px;
+$md3: 767.98px;
+$md4: 479.98px; 
+//container
+.container {
+   max-width: $mw; margin: 0 auto; width: 100%; height: 100%; padding: 0 20px;
+   @media (max-width: $md1) {max-width: 970px;}
+   @media (max-width: $md2) {max-width: 750px;}
+   @media (max-width: $md4) {max-width: none; padding: 0 10px;}
+
+   &__header{
+      max-width: 1480px; margin: 0 auto; width: 100%; height: 100%; padding: 0 20px;
+      @media (max-width: $md1){max-width: 970px;}
+      @media (max-width: $md2) {max-width: 950px;}
+      @media (max-width: $md4) {max-width: none; padding: 0 10px;}
+   }
+}

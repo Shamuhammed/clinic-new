@@ -1,0 +1,63 @@
+//buttons
+.btn {
+   display: inline-block;
+   height: 54px;
+   padding: 0 35px;
+   line-height: 54px;
+   border-radius: 16px;
+
+   font-family: $ff2;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 50px;
+   transition: all .3s ease;
+
+   &__blue {
+      background: #0495FD;
+      color: #FFFFFF;
+      border: 2px solid $_Blue;
+      &:hover {
+         background: $_white;
+         color: $_Blue;
+      }
+   }
+
+   &__white {
+      background: $_white;
+      color: $_Blue;
+      border: 2px solid $_Blue;
+      &:hover {
+         color: $_white;
+         background: #0495FD;
+      }
+   }
+
+   &.fw{}
+}
+//==================================================
+//input
+input[type=text], input[type=email], input[type=tel], textarea{-webkit-appearance: none; -moz-appearance: none; appearance: none;}
+.input {
+   position: relative;
+   border: 1px solid #000;
+   height: 50px;
+   border-radius: 0 !important;
+   width: 100%;
+   display: block;
+   padding: 0 20px;
+   background-color: #f8f7f7;
+   font-size: 14px;
+   font-family: $ff1;
+   &.focus{}
+   &.err{}
+}
+textarea.input {}
+//==================================================
+//form 
+.form {}
+.form-row{@include flexbox(); margin: 0px 0px;}
+.form__column{padding: 0 15px;}
+.form-input{}
+.form-button{}
+//==================================================
